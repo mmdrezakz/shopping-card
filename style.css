@@ -1,0 +1,242 @@
+@font-face {
+  font-family: bazar;
+  src: url(./font/Bazar\ @Font_farsi.ttf);
+}
+@font-face {
+  font-family: iran;
+  src: url(./font/Iranintl-Medium.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  transition: 0.5ms;
+}
+body {
+  font-family: bazar;
+  font-size: 12px;
+  box-sizing: border-box;
+  background-color: rgb(48, 47, 47);
+  color: whitesmoke;
+}
+header {
+  padding-top: 0.5rem;
+  width: 100%;
+  min-height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: whitesmoke;
+  background-color: blue;
+}
+.shop-title,
+.icon-shop {
+  margin: 0 1.2rem;
+}
+.icon-shop {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.5ms ease-in;
+}
+.quantity {
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  background-color: red;
+  padding: 0.2rem 0.5rem;
+  border-radius: 100%;
+}
+.i {
+  font-size: 30px;
+}
+
+.list {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+.list div {
+  font-family: iran;
+  font-size: 18px;
+  color: blue;
+  font-weight: bold;
+  text-align: center;
+}
+.list button {
+  width: 100%;
+  padding: 0.5rem 0;
+  border: none;
+  border-radius: 0 0 10px 10px;
+  background-color: blue;
+  color: whitesmoke;
+  font-size: 18px;
+  font-weight: bold;
+}
+.list button:hover {
+  background-color: rgb(0, 0, 96);
+  transition: all 100ms ease-in-out;
+  cursor: pointer;
+}
+
+.list img {
+  width: 100%;
+  height: auto;
+  border-radius: 10%;
+}
+
+/*Active*/
+
+.card {
+  border-radius: 0 10px 10px 0;
+  color: white !important;
+  margin: 1.2rem 1.2rem;
+  font-family: iran;
+  position: fixed;
+  top: 2rem;
+  right: 100%;
+  width: 500px;
+  min-height: 85vh;
+  max-height: max-content;
+  background-color: blue;
+  transition: all 400ms ease-out;
+}
+.active .card {
+  right: calc(100% - 720px);
+  transition: all 100ms ease-in-out;
+}
+.active .container {
+  .card {
+    transform: translateX(-200px);
+    transition: all 100ms ease-in-out;
+  }
+}
+.card h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card .check-out {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.card .check-out div {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.closes {
+  font-size: 20px;
+  background-color: red;
+  border-radius: 0 10px 10px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* LIST CARD */
+.list-card {
+  display: grid;
+  grid-template-columns: 100px repeat(1, 1fr);
+  color: whitesmoke;
+  row-gap: 10px;
+  margin: 0 4rem;
+  margin-left: -4rem;
+}
+.list-card div div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.list-card img {
+  width: 50%;
+}
+.cardButton {
+  margin: 0 0.5rem;
+  width: 28px;
+  height: 28px;
+  color: rgb(0, 0, 0);
+  background-color: white;
+  border: none;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+@media only screen and (max-width: 500px) {
+  .list {
+    grid-template-columns: auto !important;
+  }
+
+  .card {
+    position: fixed;
+    top: 2rem;
+    left: 100%;
+    width: 320px;
+    min-height: 85vh;
+    max-height: max-content;
+  }
+  .active .container {
+    .card {
+      transform: translateX(-380px);
+      transition: all 100ms ease-in-out;
+    }
+  }
+}
+@media only screen and (max-width: 800px) {
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .list img {
+    width: 100%;
+  }
+  .boxes-card {
+    width: 150px !important;
+  }
+  .list-card {
+    margin: 2rem;
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto auto;
+    color: whitesmoke;
+    row-gap: 2px;
+    margin: 0;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .card {
+    position: fixed;
+    min-height: 85vh;
+    max-height: 100vh;
+  }
+  .list-card {
+    margin-right: 4rem;
+    margin-bottom: 5rem !important;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

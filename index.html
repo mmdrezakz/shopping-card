@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>سبد خرید</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="shop-title">خرید محصول</h1>
+        <div class="icon-shop">
+          <i class="i fa fa-shopping-cart" aria-hidden="true"></i>
+
+          <span class="quantity">0</span>
+        </div>
+      </header>
+      <div
+        style="
+          font-size: 30px;
+          margin-bottom: 25px;
+          margin-top: 25px;
+          font-family: bazar;
+          text-align: center;
+          color: whitesmoke;
+        "
+      >
+        محصولات
+      </div>
+      <div style="display: flex; justify-content: center">
+        <hr style="width: 25%" />
+      </div>
+
+      <div class="list"></div>
+
+      <div class="card">
+        <h1>سبد خرید</h1>
+        <ul class="list-card"></ul>
+        <div class="check-out">
+          <div class="total">0</div>
+          <div class="closes">
+            <i class="fa fa-times" aria-hidden="true"></i>
+            <span class="close">بستن</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
